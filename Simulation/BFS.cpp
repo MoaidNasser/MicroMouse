@@ -1,4 +1,3 @@
-// BFS.cpp
 #include "API.h"
 #include <queue>
 #include <set>
@@ -106,4 +105,12 @@ struct MazeSolver {
 
     void returnToCurrent(const Cell& current, char direction) {
         move(direction, current.direction);
-        API::moveForward(-1); // Move back to the previ
+        API::moveForward(-1); // Move back to the previous cell
+    }
+};
+
+int main() {
+    MazeSolver solver;
+    solver.solve();
+    return 0;
+}
